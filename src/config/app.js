@@ -9,9 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cors(corsOptions));
 
-app.use("/", require("../views"));
-
-app.use("/user", require("../user"));
+app.use("/event", require("../event"));
 
 app.use("*", (req, res, next) => {
   next(new NotFoundError(`Could not handle ${req.method} request in '${req.protocol + '://' + req.get('host') + req.originalUrl}'`));
