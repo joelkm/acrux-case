@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-const handleError = require('../middlewares/error-handler');
-const { NotFoundError } = require('./app-error');
+const handleError = require('../errors/error-handler');
+const { NotFoundError } = require('../errors/app-error');
 
 const app = express();
 
