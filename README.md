@@ -29,4 +29,4 @@ Iba a escribir la documentación con Swagger, pero para dos cositas que hay que 
 
 - GET /event/location/:value --> Devuelve los eventos registrados en una localización
 
-- POST /event --> Registra un evento. El cuerpo de la request seria algo similar a: { "name": "<nombre>", "date": "<YYYY-MM-DD>", "location": "<location>" }. Validado con Joi
+- POST /event --> Registra un evento. El cuerpo de la request seria algo similar a: { "name": "nombre", "date": "YYYY-MM-DD", "location": "location" }. Validado con Joi
