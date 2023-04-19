@@ -13,7 +13,7 @@ module.exports = {
     getEventsByDate: async (req, res) => {
         try {
             const date = req.params.value
-            if (!date) throw new BadRequestError
+            if (!date) throw new BadRequestError("No date provided")
             const events = await model.getBy("date", date)
             return res.status(200).json({ data: events })
         } catch (error) {
@@ -23,7 +23,7 @@ module.exports = {
     getEventsByLocation: async (req, res) => {
         try {
             const location = req.params.value
-            if (!location) throw new BadRequestError
+            if (!location) throw new BadRequestError("No location provided")
             const events = await model.getBy("location", location)
             return res.status(200).json({ data: events })
         } catch (error) {

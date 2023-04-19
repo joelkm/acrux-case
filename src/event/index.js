@@ -8,3 +8,5 @@ router.get("/date/:value", controller.getEventsByDate);
 router.get("/location/:value", controller.getEventsByLocation);
 
 router.post("/", controller.createEvent);
+
+module.exports = router;

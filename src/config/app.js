@@ -1,5 +1,4 @@
 const express = require("express");
-const cors = require("cors");
 const handleError = require('../errors/error-handler');
 const { NotFoundError } = require('../errors/app-error');
 
@@ -7,7 +6,6 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(cors(corsOptions));
 
 app.use("/event", require("../event"));
 
